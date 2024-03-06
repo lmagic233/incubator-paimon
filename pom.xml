@@ -381,7 +381,7 @@ under the License.
                     </archive>
                 </configuration>
             </plugin>
-            <plugin>
+            <!--<plugin>
                 <groupId>pl.project13.maven</groupId>
                 <artifactId>git-commit-id-plugin</artifactId>
                 <version>4.0.0</version>
@@ -400,7 +400,7 @@ under the License.
                     <failOnUnableToExtractRepoInfo>false</failOnUnableToExtractRepoInfo>
                     <useNativeGit>true</useNativeGit>
                 </configuration>
-            </plugin>
+            </plugin>-->
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
