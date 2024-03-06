@@ -39,13 +39,20 @@ public class CatalogOptions {
             ConfigOptions.key("metastore")
                     .stringType()
                     .defaultValue("filesystem")
-                    .withDescription("Metastore of paimon catalog, supports filesystem and hive.");
+                    .withDescription(
+                            "Metastore of paimon catalog, supports filesystem, hive and jdbc.");
 
     public static final ConfigOption<String> URI =
             ConfigOptions.key("uri")
                     .stringType()
                     .noDefaultValue()
                     .withDescription("Uri of metastore server.");
+
+    public static final ConfigOption<Integer> CLIENT_POOL_SIZE =
+            key("client-pool-size")
+                    .intType()
+                    .defaultValue(4)
+                    .withDescription("Configure the size of the metastore client connection pool.");
 
     public static final ConfigOption<TableType> TABLE_TYPE =
             ConfigOptions.key("table.type")
